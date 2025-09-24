@@ -1,0 +1,55 @@
+/* === Part 1: CSS transitions and animations === */
+
+/* Button hover effect with transition */
+#hoverBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+#hoverBtn:hover {
+  transform: scale(1.1);
+  background: #45a049;
+}
+
+/* Animated box with transition */
+.box {
+  width: 100px;
+  height: 100px;
+  background: royalblue;
+  margin: 20px 0;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+
+/* Keyframes for a bounce animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+/* Class to trigger bounce */
+.bounce {
+  animation: bounce 1s ease;
+}
+
+/* === Popup modal animation === */
+.popup {
+  width: 250px;
+  padding: 20px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 10px;
+  position: fixed;
+  top: -300px; /* hidden initially */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+.popup.show {
+  top: 100px;
+  opacity: 1;
+}
